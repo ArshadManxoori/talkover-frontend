@@ -17,7 +17,7 @@ const Phone = ({onNext}) => {
         return;
       }
       //server-request
-      const {data} = await sendOtp({phone: phoneNumber});
+      const {data} = await sendOtp({phone: '+91'+phoneNumber});
       console.log(data);
       dispatch(setOtp({phone: data.phone, hash: data.hash}));
       onNext();
